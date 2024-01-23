@@ -1,0 +1,121 @@
+#CustomerSection {
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: rgb(232, 252, 227);
+  justify-content: center;
+}
+
+#CustomerSectionContainer {
+  width: 65%;
+}
+
+#CommentSectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Comment {
+  background-color: rgb(255, 255, 255);
+  height: 150px;
+  min-width: 60%;
+  padding: 15px;
+  border: solid 1px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 20%);
+  margin: 0 100px 0 100px;
+}
+
+#prevButton,
+#nextButton {
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  font-weight: 500;
+  background-color: rgb(68, 224, 68);
+  border-radius: 100%;
+  width: 75px;
+  height: 75px;
+}
+
+#prevButton:hover,
+#nextButton:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.arrow_img {
+  width: 30%;
+  height: 30%;
+}
+
+#arrow_image_left {
+  transform: scaleX(-1);
+}
+
+#csButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 25px;
+}
+
+.selectionDiv {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 100%;
+}
+
+#CustomerSectionContainerContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+#customerServiceImageContainer {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+
+#customerServiceImageContainer img {
+  width: 100%;
+}
+
+
+@media only screen and (max-width: 500px) {
+  #CustomerSection {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  #CustomerSectionContainer {
+    width: 90%;
+  }
+
+  .Comment {
+    margin: 0;
+    width: 85%;
+  }
+
+  #CustomerSectionContainerContainer {
+    grid-template-columns: 1fr;
+  }
+
+  #csButtonContainer {
+    width:065%;
+    margin-bottom: 50px;
+  }
+
+  #prevButton,
+#nextButton {
+  width: 50px;
+  height: 50px;
+}
+  
+}
