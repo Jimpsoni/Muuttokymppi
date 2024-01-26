@@ -1,9 +1,12 @@
 import { useState } from "react"
 import { kotimuutto, yritysmuutto } from "./ChangeText"
+import koti from "./assets/koti.png"
+import yritys from "./assets/yritys.jpg"
 import "./styles.css"
 
 const WelcomeSection = () => {
   const [display, setDisplay] = useState("kotimuutto")
+  const [image, setImage] = useState(koti)
 
   const ChangingText = () => {
     if (display === "kotimuutto") return kotimuutto
@@ -12,10 +15,12 @@ const WelcomeSection = () => {
 
   const setYritysmuutto = () => {
     setDisplay("yritysmuutto")
+    setImage(yritys)
   }
 
   const setKotimuutto = () => {
     setDisplay("kotimuutto")
+    setImage(koti)
   }
 
   return (
@@ -23,7 +28,10 @@ const WelcomeSection = () => {
       <div id='infoSection2'>
         <h2>Etsitkö...?</h2>
         <div id='infoSectionContainer'>
-          <div id='infoSectionButtonContainer'>
+          <div
+            style={{ backgroundImage: `url(${image})` }}
+            id='infoSectionButtonContainer'
+          >
             <input
               type='radio'
               className='infoSectionButton'
@@ -48,7 +56,10 @@ const WelcomeSection = () => {
       </div>
 
       <div id='CTObox'>
-        <h3>Pyydä meiltä tarjous! Se ei sido sinua mihinkään ja saat arvion muutostasi!</h3>
+        <h3>
+          Pyydä meiltä tarjous! Se ei sido sinua mihinkään ja saat arvion
+          muutostasi!
+        </h3>
         <div id='CTOButtonInfo'>Tarjouslomakkeeseen 🡆</div>
       </div>
     </section>
